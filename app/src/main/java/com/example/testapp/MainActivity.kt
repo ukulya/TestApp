@@ -1,23 +1,23 @@
 package com.example.testapp
 
+import android.annotation.SuppressLint
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.appcompat.widget.AppCompatButton
+import com.example.testapp.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {
-    val btn = findViewById<AppCompatButton>(R.id.btn)
 
+    @SuppressLint("SetTextI18n")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        btn.setOnClickListener {
-            startActivity(Intent(this,MainActivity2::class.java))
-        }
+        supportFragmentManager.beginTransaction()
+            .add(R.id.root_layout, HomeFragment())
+            .commit()
 
     }
-
-
 
 }

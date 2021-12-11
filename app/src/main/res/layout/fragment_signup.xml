@@ -3,15 +3,12 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#B12727"
-    tools:context=".Fragment1">
+    tools:context=".SignupFragment">
 
     <!-- TODO: Update blank fragment layout -->
     <TextView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:textSize="40sp"
-        android:gravity="center"
         android:text="@string/hello_blank_fragment" />
 
 </FrameLayout>
